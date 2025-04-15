@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DreamEscape Travel Agency</title>
+  <link rel="stylesheet" href="index.css">
+  <header class="hero">
+    <div class="overlay">
+      <h1>DreamEscape Travel</h1>
+      <p>Your journey begins here 🌍</p>
+    </div>
+  </header>
+  
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f4f4f4;
+    }
+    header {
+      background: url('https://source.unsplash.com/1600x400/?travel,beach') no-repeat center center/cover;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    nav {
+      background: #333;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    section {
+      padding: 40px 20px;
+      background: white;
+      margin: 20px auto;
+      max-width: 1000px;
+      border-radius: 10px;
+    }
+    .destination {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .destination img {
+      width: 300px;
+      border-radius: 8px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>DreamEscape Travel</h1>
+    <p>Your journey begins here 🌍</p>
+  </header>
+
+  <nav>
+    <a href="#destinations">Destinations</a>
+    <a href="#booking">Book Now</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="destinations">
+    <h2>Popular Destinations</h2>
+    <div class="destination">
+      <img src="https://source.unsplash.com/300x200/?paris" alt="Paris">
+      <img src="https://source.unsplash.com/300x200/?maldives" alt="Maldives">
+      <img src="https://source.unsplash.com/300x200/?newyork" alt="New York">
+    </div>
+  </section>
+
+  <section id="booking">
+    <h2>Book Your Trip</h2>
+    <form onsubmit="return validateForm()">
+      <label>Name: <input type="text" id="name" required></label><br><br>
+      <label>Email: <input type="email" id="email" required></label><br><br>
+      <label>Destination: <input type="text" id="destination" required></label><br><br>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: support@dreamescape.com</p>
+    <p>Phone: +1 234 567 8901</p>
+  </section>
+
+  <footer>
+    &copy; 2025 DreamEscape Travel Agency. All rights reserved.
+  </footer>
+
+  <script>
+    function validateForm() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const destination = document.getElementById('destination').value;
+
+      if (!name || !email || !destination) {
+        alert("Please fill in all fields.");
+        return false;
+      }
+
+      alert("Thank you for booking, " + name + "!");
+      return true;
+    }
+  </script>
+<section id="destinations">
+    <h2>Popular Destinations</h2>
+    <div class="destination">
+      <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=600&q=80" alt="Paris">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Maldives">
+      <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=600&q=80" alt="New York">
+    </div>
+  </section>
+  
+</body>
+</html>
